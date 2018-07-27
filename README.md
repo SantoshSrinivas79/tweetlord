@@ -21,6 +21,13 @@ Screenshots
 ![Screenshot-1](https://user-images.githubusercontent.com/23141800/43296815-5291c4ee-9156-11e8-9ce4-8c30a01b801d.png "Dumping the HTB profile")
 ![Screenshot-2](https://user-images.githubusercontent.com/23141800/43296820-5789703c-9156-11e8-9125-6eeac72aff22.png "Checking the account rate limit status")
 
+|    ++++    | Friends | Followers | Favorites | Timeline |
+|:----------:|:-------:|:---------:|:---------:|:--------:|
+|  **Args**  |   300   |   10000   |   2000    |    500   |
+| **Actual** |    74   |    8082   |   1637    |    326   |
+
+From the table above it is seen why the progress bars in the 1st screenshot were not filled to the end: the actual number of items in each of the sections is less than it was specified in the arguments when running the tool. It's not a bug but a feature :wink: (one API request returns no more than 200 items so the *pbar step = 200*, by the way).
+
 Dependencies
 ==========
 ### DEB Packages
