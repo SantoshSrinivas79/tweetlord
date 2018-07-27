@@ -8,8 +8,8 @@ tweetl:crown:rd
 
 Screenshots
 ==========
-![Screenshot-1](https://user-images.githubusercontent.com/23141800/43293982-c17daf28-9145-11e8-96a9-ece392c75972.png "Dumping the HTB profile")
-![Screenshot-2](https://user-images.githubusercontent.com/23141800/43293993-cd2253b0-9145-11e8-99e0-c3d8dd5dc794.png "Checking the account rate limit status")
+![Screenshot-1](https://user-images.githubusercontent.com/23141800/43296815-5291c4ee-9156-11e8-9ce4-8c30a01b801d.png "Dumping the HTB profile")
+![Screenshot-2](https://user-images.githubusercontent.com/23141800/43296820-5789703c-9156-11e8-9125-6eeac72aff22.png "Checking the account rate limit status")
 
 Dependencies
 ==========
