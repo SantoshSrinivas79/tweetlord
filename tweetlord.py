@@ -541,7 +541,7 @@ def _api_handler(am, api_method, username, count=None, max_items=0, unit='', twe
 			else:
 				full_pages = 0
 
-		if not items or len(items) > max_items:
+		if len(items) < max_items:
 			while items_remaining:
 				client = tweepy_auth(cred, mode=modes[curr_mode])
 				cursor = api_method(
@@ -880,18 +880,26 @@ def main():
 		dump['user'], max_items = user_info(am, args.user)
 
 		if args.friends:
+			if args.friends == -1:
+				args.friends = max_items['friends']
 			print_info('Collecting user friends info')
 			dump['friends'] = user_friends(am, args.user, args.friends, max_items['friends'])
 
 		if args.followers:
+			if args.followers == -1:
+				args.followers = max_items['followers']
 			print_info('Collecting user followers info')
 			dump['followers'] = user_followers(am, args.user, args.followers, max_items['followers'])
 
 		if args.favorites:
+			if args.favorites == -1:
+				args.favorites = max_items['favorites']
 			print_info('Collecting user favorites info')
 			dump['favorites'] = user_favorites(am, args.user, args.favorites, max_items['favorites'], args.tweet_extended)
 
 		if args.timeline:
+			if args.timeline == -1:
+				args.timeline = max_items['timeline']
 			print_info('Collecting user timeline info')
 			dump['timeline'] = user_timeline(am, args.user, args.timeline, max_items['timeline'], args.tweet_extended)
 

@@ -47,10 +47,10 @@ OR
   -l, --show-limits       show the rate limit status (total → remaining → time_to_wait_till_reset) for each of the accounts you set when configuring the tool
 
 optional arguments:
-  -fr N, --friends N      set the number of friends to be dumped
-  -fo N, --followers N    set the number of followers to be dumped
-  -fa N, --favorites N    set the number of favorite tweets to be dumped
-  -ti N, --timeline N     set the number of tweets from user's timeline to be dumped
+  -fr N, --friends N      set the number of friends to be dumped (if N == -1 then tweetlord will try to dump all friends)
+  -fo N, --followers N    set the number of followers to be dumped (if N == -1 then tweetlord will try to dump all followers)
+  -fa N, --favorites N    set the number of favorite tweets to be dumped (if N == -1 then tweetlord will try to dump all favorite tweets)
+  -ti N, --timeline N     set the number of tweets from user's timeline to be dumped (if N == -1 then tweetlord will try to dump all timeline tweets)
   -o NAME, --output NAME  set the output filename (".xlsx" ending will be added)
   -w, --wait-on-limit     sleep if the rate limit is exceeded (the sleeping time will be printed)
   -e, --tweet-extended    get the whole tweet text but not only the first 140 chars
