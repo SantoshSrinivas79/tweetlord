@@ -6,7 +6,7 @@ tweetl:crown:rd
 
 **tweetlord** is an open source Twitter profile dumper (downloader) with the on-the-fly account swaping support for bypassing the rate limit restrictions. It is written in Python 3, uses the [Twitter API](https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users/api-reference "API Reference — Twitter Developers") and generates `.xlsx` files at the output containing comprehensive information about the given profile.
 
-Table of Contents:
+### Table of Contents:
   * [**Screenshots**](#screenshots)
   * [**Dependencies**](#dependencies)
     * [DEB Packages](#deb-packages)
