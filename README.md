@@ -72,7 +72,7 @@ See more about the Twitter [Rate Limiting](https://developer.twitter.com/en/docs
 
 Platform
 ==========
-tweetlord works great both on Windows and GNU/Linux systems, but the resulting `.xlsx` dump files look prettier when opened in MS Excel app rather than in LibreOffice (*just IMHO, no holy wars required* :fearful:).
+tweetlord works great both on Windows and GNU/Linux systems, but the resulting `.xlsx` dump files look prettier when opened in MS Excel app rather than in LibreOffice *(just IMHO, no holy wars required :fearful:)*.
 
 Post Scriptum
 ==========
