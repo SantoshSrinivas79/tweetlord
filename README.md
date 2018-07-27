@@ -33,7 +33,7 @@ Installation
 ==========
 The order of use is pretty straightforward:
  1. :warning: First, you want to set your API keys (could be found [here](https://developer.twitter.com/en/apps)) in the *credentials.py* file for every Twitter account you want to involve in the procedure. It is needless to say that the more accounts you specify, the faster the dumping process will be (but nevertheless you can specify only one account). **If a mistake is made when filling the credentials, the script will terminate with an unhandled tweepy exception**, so keep that in mind.
- 2. Hmm... that's actually it! Feel free to run the script as shown in the next section.
+ 2. Hmm... that's actually it! Feel free to run tweetlord as shown in the next section.
 
 Usage
 ==========
@@ -44,7 +44,7 @@ tweetlord.py [-h] (-u USER | -l) [-fr FRIENDS] [-fo FOLLOWERS]
 required arguments:
   -u USER, --user USER    set the user profile you want to dump: <USER> could be a screen name or an account ID (if it is an ID, you should start the string with the "id" prefix, e. g. "id859377203242426368")
 OR
-  -l, --show-limits       show the rate limit status (total-remaining-time_to_wait_till_reset) for each of the accounts you set when configuring the tool
+  -l, --show-limits       show the rate limit status (total → remaining → time_to_wait_till_reset) for each of the accounts you set when configuring the tool
 
 optional arguments:
   -fr N, --friends N      set the number of friends to be dumped
@@ -58,9 +58,11 @@ optional arguments:
   -h, --help              show help
 ```
 
+See more about the Twitter [Rate Limiting](https://developer.twitter.com/en/docs/basics/rate-limiting.html "Rate Limiting — Twitter Developers"). 
+
 Platform
 ==========
-tweetlord works great both on Windows and GNU/Linux systems, but the resulting `.xlsx` dump files look prettier when opened in MS Excel app rather than in LibreOffice (just IMHO, no holy wars required :fearful:).
+tweetlord works great both on Windows and GNU/Linux systems, but the resulting `.xlsx` dump files look prettier when opened in MS Excel app rather than in LibreOffice (*just IMHO, no holy wars required* :fearful:).
 
 Post Scriptum
 ==========
