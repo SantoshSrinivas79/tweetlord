@@ -68,6 +68,7 @@ optional arguments:
   -fo N, --followers N    set the number of followers to be dumped (if N == -1 then tweetlord will try to dump all followers)
   -fa N, --favorites N    set the number of favorite tweets to be dumped (if N == -1 then tweetlord will try to dump all favorite tweets)
   -ti N, --timeline N     set the number of tweets from user's timeline to be dumped (if N == -1 then tweetlord will try to dump all timeline tweets)
+  -a, --all               dump ALL the sections with ALL the items in each of them
   -o NAME, --output NAME  set the output filename (".xlsx" ending will be added)
   -w, --wait-on-limit     sleep if the rate limit is exceeded (the sleeping time will be printed)
   -e, --tweet-extended    get the whole tweet text but not only the first 140 chars

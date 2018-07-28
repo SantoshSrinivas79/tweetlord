@@ -836,6 +836,7 @@ def cli_options():
 	parser.add_argument('-fo', '--followers', type=int, default=0)
 	parser.add_argument('-fa', '--favorites', type=int, default=0)
 	parser.add_argument('-ti', '--timeline', type=int, default=0)
+	parser.add_argument('-a', '--all', action='store_true')
 	parser.add_argument('-o', '--output', type=str, default='out')
 	parser.add_argument('-w', '--wait-on-limit', action='store_const', const='extended')
 	parser.add_argument('-e', '--tweet-extended', action='store_const', const='extended')
@@ -879,26 +880,26 @@ def main():
 		print_info('Collecting basic account info')
 		dump['user'], max_items = user_info(am, args.user)
 
-		if args.friends:
-			if args.friends == -1:
+		if args.friends or args.all:
+			if args.friends == -1 or args.all:
 				args.friends = max_items['friends']
 			print_info('Collecting user friends info')
 			dump['friends'] = user_friends(am, args.user, args.friends, max_items['friends'])
 
-		if args.followers:
-			if args.followers == -1:
+		if args.followers or args.all:
+			if args.followers == -1 or args.all:
 				args.followers = max_items['followers']
 			print_info('Collecting user followers info')
 			dump['followers'] = user_followers(am, args.user, args.followers, max_items['followers'])
 
-		if args.favorites:
-			if args.favorites == -1:
+		if args.favorites or args.all:
+			if args.favorites == -1 or args.all:
 				args.favorites = max_items['favorites']
 			print_info('Collecting user favorites info')
 			dump['favorites'] = user_favorites(am, args.user, args.favorites, max_items['favorites'], args.tweet_extended)
 
-		if args.timeline:
-			if args.timeline == -1:
+		if args.timeline or args.all:
+			if args.timeline == -1 or args.all:
 				args.timeline = max_items['timeline']
 			print_info('Collecting user timeline info')
 			dump['timeline'] = user_timeline(am, args.user, args.timeline, max_items['timeline'], args.tweet_extended)
