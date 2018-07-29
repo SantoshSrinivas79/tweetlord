@@ -868,6 +868,16 @@ def main():
 				print_critical('No rate limit to run \"rate_limit_status()\". Wait 15 minutes and try again', str(e))
 		return
 
+	if args.all and (args.friends or args.followers or args.favorites or args.timeline):
+		incompatible = {
+			'friends': args.friends,
+			'followers': args.followers,
+			'favorites': args.favorites,
+			'timeline': args.timeline
+		}
+		print('Incompatible parameters: all,{}'.format(','.join(key for key, val in incompatible.items() if val)))
+		return
+
 	timestart = time.time()
 	print('[*] Started at {}\n'.format(time.strftime('%H:%M:%S', time.localtime())))
 
