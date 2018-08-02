@@ -341,10 +341,11 @@ def build_xlsx(dump, filename, username):
 	})
 
 	worksheet.write(0, 0, 'This document was generated with tweetl\U0001F451rd tool (by snovvcrash).', signature_fmt)  # 👑
-	worksheet.write(1, 0, 'v{}'.format(VERSION), signature_version_fmt)
-	worksheet.write(2, 0, '{}'.format(SITE), signature_site_fmt)
+	worksheet.write(1, 0, time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()), signature_fmt)
+	worksheet.write(2, 0, 'v{}'.format(VERSION), signature_version_fmt)
+	worksheet.write(3, 0, '{}'.format(SITE), signature_site_fmt)
 
-	curr_row = 6
+	curr_row = 7
 	row_lengths = []
 
 	# ----------------------- User Info ------------------------
