@@ -41,7 +41,7 @@ tweetlord makes use of the following external modules:
   * [tqdm](https://tqdm.github.io "tqdm | A fast, extensible progress bar for Python and CLI")
   * [termcolor](https://pypi.python.org/pypi/termcolor "termcolor 1.1.0 : Python Package Index")
 
-Resolve all Python dependencies with `pip` one-liner:
+Resolve all Python dependencies with the `pip` one-liner:
 ```
 $ python3 -m pip install -r requirements.txt
 ```
