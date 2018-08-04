@@ -76,7 +76,7 @@ optional arguments:
   -h, --help              show help
 ```
 
-If there's no rate limit left, you can press Ctrl-C during the sleeping (waiting) process, **but only during the waiting process**, to skip dumping current section and continue with the next one.
+If there's no rate limit left, you can press *Ctrl-C* during the sleeping (waiting) process, **but only during the waiting process (otherwise, you'll terminate the main program)**, to skip dumping current section and continue with the next one.
 
 See more about the Twitter [Rate Limiting](https://developer.twitter.com/en/docs/basics/rate-limiting.html "Rate Limiting — Twitter Developers"). 
 
