@@ -35,11 +35,11 @@ Dependencies
 
 ### PIP Packages
 tweetlord makes use of the following external modules:
-  * [tweepy](http://docs.tweepy.org/en/latest "Tweepy Documentation — tweepy 3.6.0 documentation")
-  * [simplejson](https://simplejson.readthedocs.io/en/latest "simplejson — JSON encoder and decoder — simplejson 3.16.0 documentation")
-  * [xlsxwriter](https://xlsxwriter.readthedocs.io "Creating Excel files with Python and XlsxWriter — XlsxWriter Documentation")
-  * [tqdm](https://tqdm.github.io "tqdm | A fast, extensible progress bar for Python and CLI")
-  * [termcolor](https://pypi.python.org/pypi/termcolor "termcolor 1.1.0 : Python Package Index")
+  * [tweepy](https://github.com/tweepy/tweepy "tweepy/tweepy: Twitter for Python!")
+  * [simplejson](https://github.com/simplejson/simplejson "simplejson/simplejson: simplejson is a simple, fast, extensible JSON encoder/decoder for Python")
+  * [xlsxwriter](https://github.com/jmcnamara/XlsxWriter "jmcnamara/XlsxWriter: A Python module for creating Excel XLSX files.")
+  * [tqdm](https://github.com/tqdm/tqdm "tqdm/tqdm: A fast, extensible progress bar for Python and CLI")
+  * [termcolor](https://pypi.org/project/termcolor "termcolor · PyPI")
 
 Resolve all Python dependencies with the `pip` one-liner:
 ```
