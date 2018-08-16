@@ -88,4 +88,4 @@ Post Scriptum
 ==========
 If this tool has been useful for you, feel free to buy me a coffee :coffee:
 
-[![Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoff.ee/snovvcrash)
+[![Coffee](https://user-images.githubusercontent.com/23141800/44239302-60d2fc00-a1c1-11e8-8aaa-4fb829df2293.png)](https://buymeacoff.ee/snovvcrash)
