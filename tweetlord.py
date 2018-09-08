@@ -3,7 +3,7 @@
 
 """
 @file tweetlord.py
-@author Sam Freeside <snovvcrash@protonmail.com>
+@author Sam Freeside <scr.im/emsnovvcrash>
 @date 2018-07
 
 @brief Twitter profile dumper.
