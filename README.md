@@ -1,7 +1,7 @@
 tweetl:crown:rd
 ==========
 [![Python Version](https://img.shields.io/badge/python-3.x-blue.svg)](https://www.python.org/downloads)
-[![License](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://raw.githubusercontent.com/snovvcrash/usbrip/master/LICENSE)
+[![License](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://raw.githubusercontent.com/snovvcrash/tweetlord/master/LICENSE)
 [![Built with Love](https://img.shields.io/badge/built%20with-%F0%9F%92%97%F0%9F%92%97%F0%9F%92%97-lightgrey.svg)](https://emojipedia.org/growing-heart)
 
 **tweetlord** is an open source Twitter profile dumper (downloader) with the on-the-fly account swapping support for bypassing the rate limit restrictions. It is written in Python 3, uses the [Twitter API](https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users/api-reference "API Reference — Twitter Developers") and generates `.xlsx` files at the output containing comprehensive information about the given profile.
