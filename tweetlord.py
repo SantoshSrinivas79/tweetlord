@@ -53,10 +53,10 @@ from credentials import credentials
 VERSION = '0.1'
 SITE = 'https://github.com/snovvcrash/tweetlord'
 
-VERSION_FORMATTED = '\033[1;37m{\033[1;35mv%s\033[1;37m}\033[1;34m' % VERSION
-SITE_FORMATTED = '\033[0m\033[4;37m%s\033[1;34m' % SITE
+VERSION_FORMATTED = '\033[0m\033[1;37m{\033[1;35mv%s\033[1;37m}\033[0m' % VERSION
+SITE_FORMATTED = '\033[0m\033[4;37m%s\033[0m' % SITE
 
-BANNER = """\033[1;34m\
+BANNER = '''\033[1;34m\
                                                         
  _                     _   _                   _        
 | |___      _____  ___| |_| |  \033[1;37m_.+._\033[1;34m   _ __ __| |       
@@ -64,9 +64,9 @@ BANNER = """\033[1;34m\
 | |_ \\ V  V /  __/  __/ |_| | \033[1;37m\\@*@*@/\033[1;34m | | | (_| |     
  \\__| \\_/\\_/ \\___|\\___|\\__|_| \033[1;37m{_____}\033[1;34m |_|  \\__,_|
                                                         
-%s
-%s\033[0m\
-""" % (VERSION_FORMATTED, SITE_FORMATTED)
+%s\033[1;34m
+%s\
+''' % (VERSION_FORMATTED, SITE_FORMATTED)
 
 USER_COLS = [
 	'Profile URL',
