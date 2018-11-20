@@ -23,7 +23,7 @@ Screenshots
 
 |    ++++    | Friends | Followers | Favorites | Timeline |
 |:----------:|:-------:|:---------:|:---------:|:--------:|
-|  **Args**  |   300   |   10000   |   2000    |    500   |
+|   **Arg**  |   300   |   10000   |   2000    |    500   |
 | **Actual** |    74   |    8082   |   1637    |    326   |
 
 From the table above it is seen why the progress bars in the 1st screenshot were not filled to the end: the actual number of items in each of the sections is less than it was specified in the arguments when running the tool. It's not a bug but a feature :wink: (one API request returns no more than 200 items so the *pbar step = 200*, btw).
