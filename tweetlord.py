@@ -114,6 +114,7 @@ FAVORITES_COLS = [
 ]
 
 TIMELINE_COLS = [
+	'Created at',
 	'Tweet Text',
 	'Tweet URL',
 	'Favorite Count',
@@ -277,6 +278,8 @@ def user_timeline(am, username, count, max_timeline, tweet_extended):
 
 	table_rows = []
 	for status in statuses:
+		created_at = status.created_at.strftime('%Y-%m-%d %H:%M:%S')
+
 		if tweet_extended:
 			text = unescape(status.full_text)
 		else:
@@ -293,6 +296,7 @@ def user_timeline(am, username, count, max_timeline, tweet_extended):
 			latitude = longitude = ''
 
 		table_rows.append([
+			created_at,
 			text,
 			status_url,
 			favorite_count,
@@ -340,10 +344,15 @@ def build_xlsx(dump, filename, username):
 		'font_color': '#508CD4'
 	})
 
-	worksheet.write(0, 0, 'This document was generated with tweetl\U0001F451rd tool (by snovvcrash)', signature_fmt)  # 👑
-	worksheet.write(1, 0, 'at {} as: "py {}"'.format(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()), ' '.join(sys.argv)), signature_fmt)
-	worksheet.write(2, 0, 'v{}'.format(VERSION), signature_version_fmt)
-	worksheet.write(3, 0, '{}'.format(SITE), signature_site_fmt)
+	signature_text = 'This document was generated with tweetl\U0001F451rd tool (by snovvcrash)'  # 👑
+	signature_date_and_args = 'at {} as: "py {}"'.format(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()), ' '.join(sys.argv))
+	signature_version = 'v{}'.format(VERSION)
+	signature_site = '{}'.format(SITE)
+
+	worksheet.write(0, 0, signature_text, signature_fmt)
+	worksheet.write(1, 0, signature_date_and_args, signature_fmt)
+	worksheet.write(2, 0, signature_version, signature_version_fmt)
+	worksheet.write(3, 0, signature_site, signature_site_fmt)
 
 	curr_row = 7
 	row_lengths = []
@@ -357,6 +366,13 @@ def build_xlsx(dump, filename, username):
 		worksheet.write(curr_row, i, title, col_title_fmt)
 		row_lengths.append([len(title)])
 	curr_row += 1
+
+	row_lengths[0].extend([
+		len(signature_text),
+		len(signature_date_and_args),
+		len(signature_version),
+		len(signature_site)
+	])
 
 	for i, elem in enumerate(dump['user']):
 		worksheet.write(curr_row, i, elem)
@@ -539,8 +555,8 @@ def _api_handler(am, api_method, username, count=None, max_items=0, unit='', twe
 							.format(api_method_name), str(e), write=pbar.write
 						)
 						return items
-			else:
-				full_pages = 0
+				else:
+					full_pages = 0
 
 		if len(items) < max_items:
 			while items_remaining:
