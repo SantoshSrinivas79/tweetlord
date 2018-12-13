@@ -1,14 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-"""
-@file tweetlord.py
-@author Sam Freeside <snovvcrash@protonmail[.]ch>
-@date 2018-07
+"""LICENSE
 
-@brief Twitter profile dumper.
-
-@license
 Copyright (C) 2018 Sam Freeside
 
 This program is free software: you can redistribute it and/or modify
@@ -23,22 +17,29 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
-@endlicense
 """
+
+__author__    = 'Sam Freeside (@snovvcrash)'
+__email__     = 'snovvcrash@protonmail[.]ch'
+__copyright__ = 'Copyright (C) 2018 Sam Freeside'
+
+__license__ = 'GPL-3.0'
+__date__    = '2018-07-27'
+__version__ = '0.1'
+__site__    = 'https://github.com/snovvcrash/tweetlord'
+__brief__   = 'Twitter profile dumper.'
 
 import json
 import string
 import sys
 import time
 import datetime
-
-import tweepy
-import xlsxwriter
-
 from queue import PriorityQueue
 from html import unescape
 from argparse import ArgumentParser
 
+import tweepy
+import xlsxwriter
 from tqdm import tqdm
 from termcolor import cprint, colored
 
@@ -50,11 +51,8 @@ from credentials import credentials
 # ----------------------------------------------------------
 
 
-VERSION = '0.1'
-SITE = 'https://github.com/snovvcrash/tweetlord'
-
-VERSION_FORMATTED = '\033[0m\033[1;37m{\033[1;35mv%s\033[1;37m}\033[0m' % VERSION
-SITE_FORMATTED = '\033[0m\033[4;37m%s\033[0m' % SITE
+VERSION_FORMATTED = '\033[0m\033[1;37m{\033[1;35mv%s\033[1;37m}\033[0m' % __version__
+SITE_FORMATTED = '\033[0m\033[4;37m%s\033[0m' % __site__
 
 BANNER = '''\033[1;34m\
                                                         
@@ -346,8 +344,8 @@ def build_xlsx(dump, filename, username):
 
 	signature_text = 'This document was generated with tweetl\U0001F451rd tool (by snovvcrash)'  # 👑
 	signature_date_and_args = 'at {} as: "py {}"'.format(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()), ' '.join(sys.argv))
-	signature_version = 'v{}'.format(VERSION)
-	signature_site = '{}'.format(SITE)
+	signature_version = 'v{}'.format(__version__)
+	signature_site = '{}'.format(__site__)
 
 	worksheet.write(0, 0, signature_text, signature_fmt)
 	worksheet.write(1, 0, signature_date_and_args, signature_fmt)
