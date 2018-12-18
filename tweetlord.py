@@ -400,7 +400,6 @@ def build_xlsx(dump, filename, username):
 
 	# ---------------- Correcting columns width ----------------
 
-	row_lengths[0].append(61)  # signature (first string) length
 	for i in range(len(USER_COLS)):  # USER_COLS is max length
 		worksheet.set_column(i, i, max(row_lengths[i]) + 2)
 
