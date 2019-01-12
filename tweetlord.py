@@ -924,7 +924,8 @@ def main():
 
 		if args.timeline or args.all:
 			if args.timeline == -1 or args.all:
-				args.timeline = max_items['timeline']
+				# From developer.twitter.com: "This method can only return up to 3,200 of a user's most recent Tweets".
+				args.timeline = max_items['timeline'] if max_items['timeline'] < 3200 else 3200
 			print_info('Collecting user timeline info')
 			dump['timeline'] = user_timeline(am, args.user, args.timeline, max_items['timeline'], args.tweet_extended)
 
