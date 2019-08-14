@@ -943,7 +943,7 @@ def main():
 			print_critical('No data collected')
 
 	print('\n[*] Time taken: {}'.format(datetime.timedelta(seconds=time.time() - timestart)))
-	print('[*] Shutted down at {}'.format(time.strftime('%H:%M:%S', time.localtime())))
+	print('[*] Shut down at {}'.format(time.strftime('%H:%M:%S', time.localtime())))
 
 
 if __name__ == '__main__':
