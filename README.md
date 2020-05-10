@@ -14,7 +14,6 @@ tweetl:crown:rd
   * [**Installation**](#installation)
   * [**Usage**](#usage)
   * [**Platform**](#platform)
-  * [**Post Scriptum**](#post-scriptum)
 
 Screenshots
 ==========
@@ -83,9 +82,3 @@ See more about the Twitter [Rate Limiting](https://developer.twitter.com/en/docs
 Platform
 ==========
 tweetlord works great both on Windows and GNU/Linux systems, but the resulting `.xlsx` dump files look prettier when opened in MS Excel app rather than in LibreOffice (and this is quite obvious because LibreOffice doesn't fully support `.xlsx` format anyhow :unamused:).
-
-Post Scriptum
-==========
-If this tool has been useful for you, feel free to buy me a coffee :coffee:
-
-[![Coffee](https://user-images.githubusercontent.com/23141800/44239302-60d2fc00-a1c1-11e8-8aaa-4fb829df2293.png)](https://buymeacoff.ee/snovvcrash)
